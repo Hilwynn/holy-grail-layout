@@ -1,0 +1,135 @@
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  margin: 0;
+  padding: 0
+}
+
+html {
+  background: #0025FF;
+  color: #fff;
+  font-size: 62.5%;
+  padding: 40px 0;
+}
+
+header {
+  padding: 20px;
+  margin-bottom: 55px;
+  text-align: center;
+}
+
+.logo {
+  text-align: center;
+  display: inline-block;
+  width: 200px;
+  height: 200px;
+  border-radius: 100%;
+  background: #fff;
+
+}
+
+.logo img {
+  width: 140px;
+  margin-top: 55px;
+}
+
+.yearbook {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  /* -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center; */
+  margin: 0 auto;
+  width: 100%;
+}
+
+.yearbook-photo {
+  width: 100%;
+}
+
+.yearbook-photo-inner {
+  background-color: #fff;
+  border: 1px solid rgba(0, 0, 0, .5);
+	-webkit-box-shadow: 1px 2px 5px rgba(0, 0, 0, .4);
+	        box-shadow: 1px 2px 5px rgba(0, 0, 0, .4);
+  color: #292929;
+  font-family: 'Gloria Hallelujah', cursive;
+  font-size: 2.8rem;
+  margin: 20px;
+  padding: 20px;
+  text-align: center;
+}
+
+.yearbook-photo-inner p {
+  color: #000;
+  line-height: 1.2;
+}
+
+.yearbook-photo-img {
+   border: 1px solid rgba(0, 0, 0, .1);
+   height: 0;
+   margin-bottom: 12px;
+   overflow: hidden;
+   padding-bottom: 100%;
+   position: relative;
+   width: 100%;
+}
+
+.yearbook-photo-img img {
+   left: 0;
+   position: absolute;
+   top: 0;
+   width: 100%;
+}
+
+.yearbook-photo-img img.adjusted-ten {
+  top: -10%;
+}
+
+.yearbook-photo-img img.adjusted-twentyfive {
+  top: -25%;
+}
+
+.yearbook-photo:nth-child(even), .yearbook-photo:nth-child(odd) {
+  -webkit-transition: 1s ease-in-out;
+  transition: 1s ease-in-out;
+}
+
+.yearbook-photo:nth-child(even):hover {
+  -webkit-transform: rotate(15deg);
+  transform: rotate(15deg);
+  z-index: 2;
+}
+
+.yearbook-photo:nth-child(odd):hover {
+  -webkit-transform: rotate(-15deg);
+  transform: rotate(-15deg);
+  z-index: 2;
+}
+
+@media only screen and (min-width: 600px) {
+  .yearbook-photo {
+    width: 50%;
+  }
+}
+
+@media only screen and (min-width: 900px) {
+  .yearbook {
+    width: 90%;
+  }
+}
+
+@media only screen and (min-width: 1200px) {
+  .yearbook-photo {
+    width: 33%;
+  }
+}
+
+@media only screen and (min-width: 1800px) {
+  .yearbook-photo {
+    width: 25%;
+  }
+}
