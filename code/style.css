@@ -11,25 +11,16 @@ html {
   font-size: 62.5%;
 }
 
-.header {
-  background: pink;
-  padding: 20px;
-  text-align: center;
+body {
+  font-family: 'Roboto', 'Helvetica', sans-serif;
+  font-size: 1.2rem;
 }
 
-.logo {
-  text-align: center;
-  display: inline-block;
-  width: 200px;
-  height: 200px;
-  border-radius: 100%;
-  background: #fff;
-
-}
-
-.logo img {
-  width: 140px;
-  margin-top: 55px;
+.wrapper > * {
+  padding: 10px;
+  -webkit-box-flex: 1;
+      -ms-flex: 1 100%;
+          flex: 1 100%;
 }
 
 .wrapper {
@@ -42,19 +33,39 @@ html {
           flex-flow: row wrap;
 }
 
-.wrapper > * {
-  padding: 10px;
-  -webkit-box-flex: 1;
-      -ms-flex: 1 100%;
-          flex: 1 100%;
+.header {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background: #ffaec1;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  padding: 20px;
 }
 
-.left {
-  background: lavender;
+.logo {
+  text-align: center;
+  display: inline-block;
+  width: 200px;
+  height: 200px;
+  border-radius: 100%;
+  background: #fff;
 }
 
-.right {
-  background: lightblue;
+.logo img {
+  width: 140px;
+  margin-top: 55px;
+}
+
+h1 {
+  font-family: 'Gloria Hallelujah', cursive;
+  font-size: 2.8rem;
+  margin-top: 5px;
 }
 
 .yearbook {
@@ -66,12 +77,8 @@ html {
   /* -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center; */
-  margin: 0 auto;
+  margin: 40px auto 30px;
   width: 100%;
-}
-
-.footer {
-  background: thistle;
 }
 
 .yearbook-photo {
@@ -138,7 +145,51 @@ html {
   z-index: 2;
 }
 
+h2 {
+  font-family: 'Gloria Hallelujah', cursive;
+  font-size: 2.8rem;
+}
+.left, .right {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  padding: 40px 0 0;
+}
+
+.right {
+  padding-bottom: 30px;
+}
+
+ol {
+  padding-left: 20px;
+}
+
+ol li {
+  margin-bottom: 5px;
+}
+
+.footer {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background: #ffaec1;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  height: 40px;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
 @media only screen and (min-width: 600px) {
+  .left, .right {
+    -webkit-box-flex: 1;
+        -ms-flex: 1 auto;
+            flex: 1 auto;
+  }
   .yearbook-photo {
     width: 50%;
   }
@@ -146,7 +197,55 @@ html {
 
 @media only screen and (min-width: 900px) {
   .yearbook {
-    width: 90%;
+    -webkit-box-flex: 10;
+        -ms-flex: 10 0px;
+            flex: 10 0px;
+  }
+  .left {
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-ordinal-group: 2;
+        -ms-flex-order: 1;
+            order: 1;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+  }
+  .yearbook {
+    -webkit-box-ordinal-group: 3;
+        -ms-flex-order: 2;
+            order: 2;
+  }
+  .right {
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-ordinal-group: 4;
+        -ms-flex-order: 3;
+            order: 3;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+  }
+  .footer {
+    -webkit-box-ordinal-group: 5;
+        -ms-flex-order: 4;
+            order: 4;
+  }
+  .left div, .right div {
+    width: 60%;
+  }
+  ol, aside p {
+    margin-bottom: 20px;
   }
 }
 
